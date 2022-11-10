@@ -25,7 +25,7 @@
     padding: 2em;
     border-bottom: 1px solid black;
   }
-  
+
   .navbar-data {
     display: flex;
     flex-direction: row;
@@ -40,7 +40,11 @@
   }
 
   .navBar-link:focus {
-    color: hsl(206, 100%, 50%)
+    color: hsl(206, 100%, 50%);
+  }
+
+  .selected {
+    color: hsl(206, 100%, 50%);
   }
 
   .user-button {

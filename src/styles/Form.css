@@ -2,21 +2,21 @@
   .add-form > * {
     margin-bottom: 1em;
   }
-  
+
   .form-inputs {
     display: flex;
   }
-  
+
   .form-inputs > * {
     padding: 0.8em;
     border-radius: 0.5em;
     border: 1px solid gray;
   }
-  
+
   .form-inputs :first-child {
     width: 50%;
   }
-  
+
   .form-inputs :not(:first-child) {
     width: 20%;
     margin-left: auto;
