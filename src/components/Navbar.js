@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Navbar.css';
+import { AiOutlineUser } from 'react-icons/ai';
 
 const Navbar = () => (
   <div className="navbar-container">
@@ -8,7 +9,9 @@ const Navbar = () => (
       <span>BOOKS</span>
       <span>CATEGORIES</span>
     </div>
-    <img alt="user-icon" />
+    <button type="button" className="user-button">
+      <AiOutlineUser style={{ color: 'black', width: '30px', height: '25px' }} />
+    </button>
   </div>
 );
 

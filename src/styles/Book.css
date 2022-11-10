@@ -1,0 +1,77 @@
+.book-container {
+  background-color: white;
+  padding: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+  .books-container {
+    background-color: hsl(0, 0%, 98%);
+    margin: 0 3em 0 3em;
+    height: 80vh;
+    padding: 3em;
+  }
+
+  .book-container {
+    background-color: white;
+    margin-bottom: 1em;
+    padding: 2em;
+    border: 1px solid gray;
+  }
+
+  .book-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .book-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-buttons-container {
+    margin-top: 1em;
+  }
+
+  .book-buttons-container > * {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-inline-end: 1em;
+  }
+
+  .progress-container {
+    display: flex;
+  }
+
+  .graphic-progress {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-right: 2em;
+  }
+
+  .progress-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circular-progress {
+    border-radius: 50%;
+    width: 4.25rem;
+    height: 4.25rem;
+    border: 5px solid #307bbe;
+    border-left-color: #e8e8e8;
+    transform: rotate(45deg);
+  }
+
+  .current-chapter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+}

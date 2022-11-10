@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  margin: 1em;
   text-align: center;
 }
 
@@ -22,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    margin: 3em;
+    margin: 3em 3em 0 3em;
     padding: 2em;
     border-bottom: 1px solid black;
   }
@@ -32,5 +31,15 @@
     flex-direction: row;
     align-items: center;
     gap: 3em;
+  }
+
+  .navbar-data > span {
+    cursor: pointer;
+  }
+
+  .user-button {
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid black;
   }
 }

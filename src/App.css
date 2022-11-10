@@ -1,6 +1,5 @@
 :root {
   --ff-primary: 'Montserrat', sans-serif;
-  
 }
 
 * {
@@ -8,8 +7,23 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--ff-primary);
+  list-style: none;
+}
+
+button,
+input[type=button] {
+  cursor: pointer;
 }
 
 body {
-  background-color: aqua;
+  background-color: #f5f6fa;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App > * {
+  border: 1px solid rgba(128, 128, 128, 0.112);
 }
