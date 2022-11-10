@@ -33,13 +33,20 @@
     gap: 3em;
   }
 
-  .navbar-data > span {
+  .navBar-link {
     cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
+
+  .navBar-link:focus {
+    color: hsl(206, 100%, 50%)
   }
 
   .user-button {
     border-radius: 20px;
     outline: none;
     border: 1px solid black;
+    padding: 0.1em;
   }
 }

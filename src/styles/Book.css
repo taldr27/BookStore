@@ -4,7 +4,9 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .books-container {
+  .big-container {
+    display: flex;
+    flex-direction: column;
     background-color: hsl(0, 0%, 98%);
     margin: 0 3em 0 3em;
     height: 80vh;
@@ -38,6 +40,7 @@
     border: none;
     cursor: pointer;
     margin-inline-end: 1em;
+    color: black;
   }
 
   .progress-container {

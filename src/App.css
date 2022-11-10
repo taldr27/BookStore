@@ -13,6 +13,11 @@
 button,
 input[type=button] {
   cursor: pointer;
+  background-color: hsl(206, 100%, 50%);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.8em;
 }
 
 body {
