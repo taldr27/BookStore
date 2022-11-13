@@ -1,14 +1,34 @@
-import React from 'react';
-import AddBook from '../../components/AddBook';
-import Book from '../../components/Book';
-
-const Books = () => (
-  <div className="big-container">
-    <Book title="The Hunger Games" author="Suzanne Collins" />
-    <Book title="Dune" author="Frank Herbert" />
-    <Book title="Capital in the Twenty-First Century" author="Suzanne Collins" />
-    <AddBook />
-  </div>
+export const addBook = () => (
+  {
+    type: 'ADD_BOOK',
+    payload: test,
+  }
 );
 
-export default Books;
+export const removeBook = () => (
+  {
+    type: 'REMOVE_BOOK',
+    payload: test,
+  }
+);
+
+export default function bookReducer(state = [], action) {
+  switch (action.type) {
+    case 'ADD_BOOK':
+      return [
+        ...state,
+        {
+          payload: action.payload,
+        },
+      ];
+    case 'REMOVE_BOOK':
+      return [
+        ...state,
+        {
+          payload: action.payload,
+        },
+      ];
+    default:
+      return state;
+  }
+}
