@@ -1,12 +1,14 @@
+const CHECK_STATUS = 'bookstore/categories/checkStatus';
+
 export const checkStatus = () => (
   {
-    type: 'CHECK_STATUS',
+    type: CHECK_STATUS,
     payload: 'Test',
   }
 );
 
 export default function categoriesReducer(state = [], action) {
-  if (action.type === 'CHECK_STATUS') {
+  if (action.type === CHECK_STATUS) {
     return 'Under Construction';
   }
   return state;
