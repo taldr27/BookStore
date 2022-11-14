@@ -1,5 +1,5 @@
-const ADD_BOOK = 'bookstore/books/addBook';
-const REMOVE_BOOK = 'bookstore/books/removeBook';
+const ADD_BOOK = 'bookstore/src/redux/books/addBook';
+const REMOVE_BOOK = 'bookstore/src/redux/books/removeBook';
 
 export const addBook = () => (
   {

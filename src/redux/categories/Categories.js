@@ -1,4 +1,4 @@
-const CHECK_STATUS = 'bookstore/categories/checkStatus';
+const CHECK_STATUS = 'bookstore/src/redux/categories/checkStatus';
 
 export const checkStatus = () => (
   {
