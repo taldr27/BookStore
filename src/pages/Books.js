@@ -1,13 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import AddBook from '../components/AddBook';
 import Book from '../components/Book';
 
 const Books = () => {
-  (
+  const books = useSelector((state) => state.books);
+  return (
     <div className="big-container">
-      <Book title="The Hunger Games" author="Suzanne Collins" />
-      <Book title="Dune" author="Frank Herbert" />
-      <Book title="Capital in the Twenty-First Century" author="Suzanne Collins" />
+      {books.map((book) => (<Book key={book.id} title={book.title} author={book.author} />))}
       <AddBook />
     </div>
   );
