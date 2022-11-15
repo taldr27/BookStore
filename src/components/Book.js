@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Book.css';
 
-const Book = ({ title, author }) => (
+const Book = (
+  {
+    title, author, completed, chapter,
+  },
+) => (
   <div className="book-container">
     <div>
       <ul>
@@ -25,13 +29,15 @@ const Book = ({ title, author }) => (
                 <div className="graphic-progress">
                   <div className="circular-progress" />
                   <div className="progress-number">
-                    <span>64%</span>
+                    <span>{completed}</span>
                     <span>Completed</span>
                   </div>
                 </div>
                 <div className="current-chapter">
                   <span>Current Chapter</span>
-                  <span>Chapter 17</span>
+                  <span>
+                    {`Chapter ${chapter}`}
+                  </span>
                   <button type="button">Update progress</button>
                 </div>
               </div>
@@ -46,6 +52,8 @@ const Book = ({ title, author }) => (
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  completed: PropTypes.string.isRequired,
+  chapter: PropTypes.string.isRequired,
 };
 
 export default Book;

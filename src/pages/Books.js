@@ -7,7 +7,15 @@ const Books = () => {
   const books = useSelector((state) => state.books);
   return (
     <div className="big-container">
-      {books.map((book) => (<Book key={book.id} title={book.title} author={book.author} />))}
+      {books.map((book) => (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+          completed={book.completed}
+          chapter={book.chapter}
+        />
+      ))}
       <AddBook />
     </div>
   );

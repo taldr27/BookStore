@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 import '../styles/Form.css';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const uId = uuid();
+  const id = uId.slice(0, 8);
+  const completed = Math.floor(Math.random() * 100);
+  const chapter = Math.floor(Math.random() * 10);
 
   const onChangeHandlerTitle = (event) => {
     setTitle(event.target.value);
-    console.log(title);
   };
 
   const onChangeHandlerAuthor = (event) => {
     setAuthor(event.target.value);
-    console.log(author);
+  };
+
+  const onClickInput = () => {
+    dispatch(addBook({
+      id, title, author, completed: `${completed}%`, chapter: `${chapter}`,
+    }));
   };
 
   return (
@@ -24,11 +34,10 @@ const AddBook = () => {
         <div className="form-inputs">
           <input type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
           <input type="text" placeholder="Book Author" onChange={onChangeHandlerAuthor} value={author} />
-          <p>{title}</p>
-          <p>{author}</p>
           <input
             type="button"
             value="ADD BOOK"
+            onClick={onClickInput}
           />
         </div>
       </form>
