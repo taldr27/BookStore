@@ -19,12 +19,14 @@ export const defaultState = [
   },
 ];
 
-// export const addBook = () => (
-//   {
-//     type: ADD_BOOK,
-//     payload: test,
-//   }
-// );
+export const addBook = (payload) => (
+  {
+    type: ADD_BOOK,
+    id: payload.id,
+    title: payload.title,
+    author: payload.author,
+  }
+);
 
 // export const removeBook = () => (
 //   {
@@ -39,7 +41,9 @@ export default function bookReducer(state = defaultState, action) {
       return [
         ...state,
         {
-          payload: action.payload,
+          id: action.id,
+          title: action.title,
+          author: action.author,
         },
       ];
     case REMOVE_BOOK:
