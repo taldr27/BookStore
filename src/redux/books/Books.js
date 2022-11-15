@@ -3,21 +3,21 @@ const REMOVE_BOOK = 'bookstore/src/redux/books/removeBook';
 
 export const defaultState = [
   {
-    id: 0,
+    id: '0a33d1ab',
     title: 'The Hunger Games',
     author: 'Suzanne Collins',
     completed: '43%',
     chapter: '14',
   },
   {
-    id: 1,
+    id: '1b35d1ab',
     title: 'Dune',
     author: 'Frank Herbert',
     completed: '10%',
     chapter: '1',
   },
   {
-    id: 2,
+    id: '0c36d3ab',
     title: 'Capital in the Twenty-First Century',
     author: 'Suzanne Collins',
     completed: '93%',
@@ -36,12 +36,12 @@ export const addBook = (payload) => (
   }
 );
 
-// export const removeBook = () => (
-//   {
-//     type: REMOVE_BOOK,
-//     payload: test,
-//   }
-// );
+export const removeBook = (payload) => (
+  {
+    type: REMOVE_BOOK,
+    id: payload.id,
+  }
+);
 
 export default function bookReducer(state = defaultState, action) {
   switch (action.type) {
@@ -57,7 +57,7 @@ export default function bookReducer(state = defaultState, action) {
         },
       ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }

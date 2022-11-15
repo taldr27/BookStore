@@ -3,7 +3,6 @@ const CHECK_STATUS = 'bookstore/src/redux/categories/checkStatus';
 export const checkStatus = () => (
   {
     type: CHECK_STATUS,
-    payload: 'Test',
   }
 );
 

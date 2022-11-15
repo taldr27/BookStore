@@ -25,6 +25,8 @@ const AddBook = () => {
     dispatch(addBook({
       id, title, author, completed: `${completed}%`, chapter: `${chapter}`,
     }));
+    setAuthor('');
+    setTitle('');
   };
 
   return (
