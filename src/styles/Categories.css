@@ -1,3 +1,11 @@
 .categories-btn {
   align-self: center;
 }
+
+.btn-off {
+  display: none;
+}
+
+p {
+  font-size: x-large;
+}
