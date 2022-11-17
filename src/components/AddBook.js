@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/Books';
+import { addBook, fetchBooks } from '../redux/books/Books';
 import '../styles/Form.css';
 
 const AddBook = () => {
@@ -26,6 +26,7 @@ const AddBook = () => {
     }));
     setAuthor('');
     setTitle('');
+    setTimeout(() => dispatch(fetchBooks()), 500);
   };
 
   return (
