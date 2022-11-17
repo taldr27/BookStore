@@ -1,0 +1,7 @@
+.remove-btn {
+  font-weight: 700;
+}
+
+.remove-btn:hover {
+  color: blue;
+}

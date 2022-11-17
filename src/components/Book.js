@@ -16,11 +16,12 @@ const Book = (
             <div>
               <div className="book-data">
                 <div className="book-details">
-                  <span>{category}</span>
-                  <span>{title}</span>
-                  <span>{author}</span>
+                  <span className="span-category">{category}</span>
+                  <span className="span-title">{title}</span>
+                  <span className="span-author">{author}</span>
                   <div className="book-buttons-container">
                     <button type="button">Comments</button>
+                    <span>|</span>
                     <RemoveBook id={id} />
                     <span>|</span>
                     <button type="button">Edit</button>
