@@ -41,16 +41,16 @@
 
   .navBar-link {
     cursor: pointer;
-    color: black;
+    color: #929292c1;
     text-decoration: none;
   }
 
   .navBar-link:focus {
-    color: #929292c1;
+    color: black;
   }
 
   .selected {
-    color: #929292c1;
+    color: black;
   }
 
   .user-button {

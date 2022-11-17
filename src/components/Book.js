@@ -31,14 +31,20 @@ const Book = (
                   <div className="graphic-progress">
                     <div className="circular-progress" />
                     <div className="progress-number">
-                      <span>60%</span>
-                      <span>Completed</span>
+                      <span style={{ fontSize: '2rem', fontFamily: 'Montserrat', color: '#121212' }}>64%</span>
+                      <span style={{
+                        fontSize: '0.875rem', fontFamily: 'Montserrat', opacity: '0.5', color: '#121212',
+                      }}
+                      >
+                        Completed
+                      </span>
                     </div>
                   </div>
+                  <div className="line" />
                   <div className="current-chapter">
-                    <span>Current Chapter</span>
-                    <span>Chapter 20</span>
-                    <button type="button">Update progress</button>
+                    <span style={{ fontSize: '0.813rem', opacity: '0.5' }}>Current Chapter</span>
+                    <span>Chapter 3: &ldquo;A Lesson Learned&ldquo;</span>
+                    <button style={{ marginTop: '1em', width: '70%' }} type="button">Update progress</button>
                   </div>
                 </div>
               </div>

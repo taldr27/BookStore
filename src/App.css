@@ -1,12 +1,13 @@
 :root {
   --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Roboto', sans-serif;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
   list-style: none;
 }
 

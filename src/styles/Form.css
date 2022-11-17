@@ -3,6 +3,12 @@
     margin-bottom: 1em;
   }
 
+  .add-form > h3 {
+    font-size: 1.25rem;
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+  }
+
   .form-inputs {
     display: flex;
   }
@@ -10,7 +16,7 @@
   .form-inputs > * {
     padding: 0.8em;
     border-radius: 0.5em;
-    border: 1px solid gray;
+    border: 1px solid #e8e8e8;
   }
 
   .form-inputs :first-child {
