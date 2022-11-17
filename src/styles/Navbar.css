@@ -26,6 +26,12 @@
     border-bottom: 1px solid black;
   }
 
+  .main-title {
+    color: hsl(206, 100%, 50%);
+    font-weight: 700;
+    font-size: 1.875rem;
+  }
+
   .navbar-data {
     display: flex;
     flex-direction: row;
@@ -40,11 +46,11 @@
   }
 
   .navBar-link:focus {
-    color: hsl(206, 100%, 50%);
+    color: #929292c1;
   }
 
   .selected {
-    color: hsl(206, 100%, 50%);
+    color: #929292c1;
   }
 
   .user-button {

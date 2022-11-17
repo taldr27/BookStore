@@ -1,5 +1,4 @@
 import React from 'react';
-// import { configureStore } from '@reduxjs/toolkit';
 import {
   Routes,
   Route,
@@ -10,7 +9,7 @@ import Books from './pages/Books';
 import Navbar from './components/Navbar';
 import Categories from './pages/Categories';
 import store from './redux/configureStore';
-// const store = configureStore();
+
 function App() {
   return (
     <Provider store={store}>

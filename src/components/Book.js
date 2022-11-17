@@ -5,7 +5,7 @@ import '../styles/Book.css';
 
 const Book = (
   {
-    id, title, author, completed, chapter,
+    id, title, author, category,
   },
 ) => (
   (
@@ -16,11 +16,12 @@ const Book = (
             <div>
               <div className="book-data">
                 <div className="book-details">
-                  <span>Action</span>
-                  <span>{title}</span>
-                  <span>{author}</span>
+                  <span className="span-category">{category}</span>
+                  <span className="span-title">{title}</span>
+                  <span className="span-author">{author}</span>
                   <div className="book-buttons-container">
                     <button type="button">Comments</button>
+                    <span>|</span>
                     <RemoveBook id={id} />
                     <span>|</span>
                     <button type="button">Edit</button>
@@ -30,15 +31,13 @@ const Book = (
                   <div className="graphic-progress">
                     <div className="circular-progress" />
                     <div className="progress-number">
-                      <span>{completed}</span>
+                      <span>60%</span>
                       <span>Completed</span>
                     </div>
                   </div>
                   <div className="current-chapter">
                     <span>Current Chapter</span>
-                    <span>
-                      {`Chapter ${chapter}`}
-                    </span>
+                    <span>Chapter 20</span>
                     <button type="button">Update progress</button>
                   </div>
                 </div>
@@ -55,8 +54,7 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;

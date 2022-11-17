@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/Books';
+import { addBook, fetchBooks } from '../redux/books/Books';
 import '../styles/Form.css';
 
 const AddBook = () => {
@@ -10,8 +10,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const uId = uuid();
   const id = uId.slice(0, 8);
-  const completed = Math.floor(Math.random() * 100);
-  const chapter = Math.floor(Math.random() * 10);
+  const category = 'Action';
 
   const onChangeHandlerTitle = (event) => {
     setTitle(event.target.value);
@@ -23,10 +22,11 @@ const AddBook = () => {
 
   const onClickInput = () => {
     dispatch(addBook({
-      id, title, author, completed: `${completed}%`, chapter: `${chapter}`,
+      id, title, author, category,
     }));
     setAuthor('');
     setTitle('');
+    setTimeout(() => dispatch(fetchBooks()), 500);
   };
 
   return (
