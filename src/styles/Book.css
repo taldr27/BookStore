@@ -108,4 +108,28 @@
     justify-content: center;
     gap: 0.5em;
   }
+
+  .updateStyle {
+    margin-top: 1em;
+    width: 70%;
+  }
+
+  .percentageStyle {
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    color: #121212;
+  }
+  
+  .completedStyle {
+    font-size: 0.875rem;
+    font-family: 'Montserrat';
+    opacity: 0.5;
+    color: #121212;
+  }
+  
+  .currentChapter {
+    font-size: 0.813rem;
+    opacity: 0.5;
+  }
+
 }
