@@ -65,7 +65,8 @@
     border: none;
     cursor: pointer;
     margin-inline-end: 1em;
-    color: black;
+    color: #4386bf;
+    font-weight: 300;
   }
 
   .progress-container {
@@ -100,6 +101,7 @@
   .line {
     border-left: 1px solid #e8e8e8;
     height: 100px;
+    color: #4386bf;
   }
 
   .current-chapter {

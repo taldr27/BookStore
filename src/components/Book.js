@@ -20,11 +20,11 @@ const Book = (
                   <span className="span-title">{title}</span>
                   <span className="span-author">{author}</span>
                   <div className="book-buttons-container">
-                    <button type="button">Comments</button>
+                    <button className="buttons-book" type="button">Comments</button>
                     <span>|</span>
                     <RemoveBook id={id} />
                     <span>|</span>
-                    <button type="button">Edit</button>
+                    <button className="buttons-book" type="button">Edit</button>
                   </div>
                 </div>
                 <div className="progress-container">
