@@ -49,9 +49,7 @@ Developed using React, Redux and using the Bookstore API.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
 - [Click here!](https://poetic-florentine-b20720.netlify.app/)
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
