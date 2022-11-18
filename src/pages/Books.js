@@ -14,6 +14,7 @@ const Books = () => {
 
   return (
     <div className="big-container">
+      <AddBook />
       {books.map((book) => (
         <Book
           key={book.id}
@@ -24,7 +25,6 @@ const Books = () => {
           progress={book.progress}
         />
       ))}
-      <AddBook />
     </div>
   );
 };

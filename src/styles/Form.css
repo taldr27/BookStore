@@ -1,4 +1,9 @@
 @media only screen and (min-width: 600px) {
+
+  .add-form {
+    padding-bottom: 1em;  
+  }
+
   .add-form > * {
     margin-bottom: 1em;
   }
