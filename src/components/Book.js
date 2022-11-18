@@ -3,6 +3,29 @@ import PropTypes from 'prop-types';
 import RemoveBook from './RemoveBook';
 import '../styles/Book.css';
 
+const percentageStyle = {
+  fontSize: '2rem',
+  fontFamily: 'Montserrat',
+  color: '#121212',
+};
+
+const completedStyle = {
+  fontSize: '0.875rem',
+  fontFamily: 'Montserrat',
+  opacity: '0.5',
+  color: '#121212',
+};
+
+const currentChapter = {
+  fontSize: '0.813rem',
+  opacity: '0.5',
+};
+
+const updateStyle = {
+  marginTop: '1em',
+  width: '70%',
+};
+
 const Book = (
   {
     id, title, author, category,
@@ -31,20 +54,17 @@ const Book = (
                   <div className="graphic-progress">
                     <div className="circular-progress" />
                     <div className="progress-number">
-                      <span style={{ fontSize: '2rem', fontFamily: 'Montserrat', color: '#121212' }}>64%</span>
-                      <span style={{
-                        fontSize: '0.875rem', fontFamily: 'Montserrat', opacity: '0.5', color: '#121212',
-                      }}
-                      >
+                      <span style={percentageStyle}>64%</span>
+                      <span style={completedStyle}>
                         Completed
                       </span>
                     </div>
                   </div>
                   <div className="line" />
                   <div className="current-chapter">
-                    <span style={{ fontSize: '0.813rem', opacity: '0.5' }}>Current Chapter</span>
+                    <span style={currentChapter}>Current Chapter</span>
                     <span>Chapter 3: &ldquo;A Lesson Learned&ldquo;</span>
-                    <button style={{ marginTop: '1em', width: '70%' }} type="button">Update progress</button>
+                    <button style={updateStyle} type="button">Update progress</button>
                   </div>
                 </div>
               </div>
