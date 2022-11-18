@@ -13,7 +13,7 @@ const RemoveBook = (id) => {
   };
   return (
     <>
-      <button type="button" className="remove-btn" onClick={onClickRemove} id={convertedId}>Remove</button>
+      <button type="button" className="buttons-book" onClick={onClickRemove} id={convertedId}>Remove</button>
     </>
   );
 };

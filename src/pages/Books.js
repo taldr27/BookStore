@@ -21,6 +21,7 @@ const Books = () => {
           title={book.title}
           author={book.author}
           category={book.category}
+          progress={book.progress}
         />
       ))}
       <AddBook />

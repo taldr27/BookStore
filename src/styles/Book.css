@@ -1,3 +1,8 @@
+:root {
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Roboto', sans-serif;
+}
+
 .book-container {
   background-color: white;
   padding: 2em;
@@ -17,24 +22,25 @@
     background-color: white;
     margin-bottom: 1em;
     padding: 2em;
-    border: 1px solid gray;
+    border: 1px solid #e8e8e8;
   }
 
   .book-data {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   .book-details {
     display: flex;
     flex-direction: column;
+    width: 50%;
   }
 
   .span-category {
     font-size: 0.875rem;
     font-weight: 700;
     opacity: 0.5;
+    font-family: var(--ff-primary);
   }
 
   .span-title {
@@ -47,7 +53,6 @@
 
   .span-author {
     color: #4386bf;
-    font-family: Roboto, sans-serif;
     font-weight: 300;
   }
 
@@ -60,18 +65,21 @@
     border: none;
     cursor: pointer;
     margin-inline-end: 1em;
-    color: black;
+    color: #4386bf;
+    font-weight: 300;
   }
 
   .progress-container {
     display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .graphic-progress {
     display: flex;
     align-items: center;
     gap: 1em;
-    margin-right: 2em;
   }
 
   .progress-number {
@@ -90,11 +98,39 @@
     transform: rotate(45deg);
   }
 
+  .line {
+    border-left: 1px solid #e8e8e8;
+    height: 100px;
+    color: #4386bf;
+  }
+
   .current-chapter {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 0.5em;
+  }
+
+  .updateStyle {
+    margin-top: 1em;
+    width: 70%;
+  }
+
+  .percentageStyle {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #121212;
+  }
+
+  .completedStyle {
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.5;
+    color: #121212;
+  }
+
+  .currentChapter {
+    font-size: 0.813rem;
+    opacity: 0.5;
   }
 }

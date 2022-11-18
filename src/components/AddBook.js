@@ -7,10 +7,10 @@ import '../styles/Form.css';
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
   const uId = uuid();
   const id = uId.slice(0, 8);
-  const category = 'Action';
 
   const onChangeHandlerTitle = (event) => {
     setTitle(event.target.value);
@@ -20,12 +20,15 @@ const AddBook = () => {
     setAuthor(event.target.value);
   };
 
+  const onChangeCategoryHandler = ({ target }) => setCategory(target.value);
+
   const onClickInput = () => {
     dispatch(addBook({
       id, title, author, category,
     }));
     setAuthor('');
     setTitle('');
+    setCategory('');
     setTimeout(() => dispatch(fetchBooks()), 500);
   };
 
@@ -34,11 +37,24 @@ const AddBook = () => {
       <form className="add-form">
         <h3>ADD NEW BOOK</h3>
         <div className="form-inputs">
-          <input type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
-          <input type="text" placeholder="Book Author" onChange={onChangeHandlerAuthor} value={author} />
+          <div className="fields">
+            <input required="required" type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
+            <input required="required" type="text" placeholder="Book Author" onChange={onChangeHandlerAuthor} value={author} />
+            <select className="user-inputs" name={category} onChange={onChangeCategoryHandler} required>
+              <option value="" hidden>Choose Genre</option>
+              <option value="Action">Action</option>
+              <option value="Suspense">Suspense</option>
+              <option value="Romance">Romance</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Real Life">Real Life</option>
+            </select>
+          </div>
           <input
             type="button"
             value="ADD BOOK"
+            className="add-btn"
             onClick={onClickInput}
           />
         </div>

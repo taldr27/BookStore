@@ -20,25 +20,28 @@ const Book = (
                   <span className="span-title">{title}</span>
                   <span className="span-author">{author}</span>
                   <div className="book-buttons-container">
-                    <button type="button">Comments</button>
+                    <button className="buttons-book" type="button">Comments</button>
                     <span>|</span>
                     <RemoveBook id={id} />
                     <span>|</span>
-                    <button type="button">Edit</button>
+                    <button className="buttons-book" type="button">Edit</button>
                   </div>
                 </div>
                 <div className="progress-container">
                   <div className="graphic-progress">
                     <div className="circular-progress" />
                     <div className="progress-number">
-                      <span>60%</span>
-                      <span>Completed</span>
+                      <span className="percentageStyle">64%</span>
+                      <span className="completedStyle">
+                        Completed
+                      </span>
                     </div>
                   </div>
+                  <div className="line" />
                   <div className="current-chapter">
-                    <span>Current Chapter</span>
-                    <span>Chapter 20</span>
-                    <button type="button">Update progress</button>
+                    <span className="currentChapter">Current Chapter</span>
+                    <span>Chapter 3: &ldquo;A Lesson Learned&ldquo;</span>
+                    <button className="updateStyle" type="button">Update progress</button>
                   </div>
                 </div>
               </div>
