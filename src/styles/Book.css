@@ -118,20 +118,19 @@
 
   .percentageStyle {
     font-size: 2rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     color: #121212;
   }
-  
+
   .completedStyle {
     font-size: 0.875rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     opacity: 0.5;
     color: #121212;
   }
-  
+
   .currentChapter {
     font-size: 0.813rem;
     opacity: 0.5;
   }
-
 }
