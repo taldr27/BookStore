@@ -1,7 +1,4 @@
-.buttons-book {
-  font-weight: 700;
-}
 
-.buttons-book:hover {
-  color: blue;
+.remove-book:hover {
+  color: black;
 }

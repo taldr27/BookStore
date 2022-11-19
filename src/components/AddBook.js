@@ -47,8 +47,8 @@ const AddBook = () => {
               <option value="Romance">Romance</option>
               <option value="Comedy">Comedy</option>
               <option value="Thriller">Thriller</option>
-              <option value="Fiction">Fiction</option>
-              <option value="Real Life">Real Life</option>
+              <option value="Fiction">Science Fiction</option>
+              <option value="Economy">Economy</option>
             </select>
           </div>
           <input

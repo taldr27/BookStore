@@ -4,7 +4,7 @@ import axios from 'axios';
 const ADD_BOOK = 'bookstore/src/redux/books/addBook';
 const REMOVE_BOOK = 'bookstore/src/redux/books/removeBook';
 const FETCH_BOOKS = 'bookstore/src/redux/books/fetchBooks';
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/EqZ6YUUbJz8PKUL0OiMU/books/';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/SZh1JDft9VNkjs1SGxQE/books/';
 
 export const fetchBooks = createAsyncThunk(FETCH_BOOKS, () => axios.get(url)
   .then((response) => {

@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 98%);
-    margin: 0 3em 0 3em;
-    height: 80vh;
+    margin: 0 3em 3em 3em;
+    height: 100%;
     padding: 3em;
   }
 
@@ -28,6 +28,7 @@
   .book-data {
     display: flex;
     align-items: center;
+    gap: 1em;
   }
 
   .book-details {
@@ -99,7 +100,7 @@
   }
 
   .line {
-    border-left: 1px solid #e8e8e8;
+    border-left: 1px solid #e0e0e0;
     height: 100px;
     color: #4386bf;
   }
