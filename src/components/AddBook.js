@@ -8,6 +8,7 @@ const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
+  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
   const uId = uuid();
   const id = uId.slice(0, 8);
@@ -21,21 +22,27 @@ const AddBook = () => {
   };
 
   const onChangeCategoryHandler = ({ target }) => setCategory(target.value);
-
   const onClickInput = () => {
-    dispatch(addBook({
-      id, title, author, category,
-    }));
-    setAuthor('');
-    setTitle('');
-    setCategory('');
-    setTimeout(() => dispatch(fetchBooks()), 500);
+    if (title !== '' && author !== '') {
+      dispatch(addBook({
+        id, title, author, category,
+      }));
+      setAuthor('');
+      setTitle('');
+      setCategory('');
+      setTimeout(() => dispatch(fetchBooks()), 500);
+    } else {
+      setMessage('Please, put something in the fields');
+      setTimeout(() => {
+        setMessage('');
+      }, 2000);
+    }
   };
-
   return (
     <>
       <form className="add-form">
         <h3>ADD NEW BOOK</h3>
+        <h2>{message}</h2>
         <div className="form-inputs">
           <div className="fields">
             <input required="required" type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
