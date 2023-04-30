@@ -7,12 +7,6 @@
     margin-bottom: 1em;
   }
 
-  .add-form > h3 {
-    font-size: 1.25rem;
-    color: #888;
-    font-family: 'Montserrat', sans-serif;
-  }
-
   .form-inputs {
     display: flex;
     justify-content: space-between;
@@ -41,5 +35,13 @@
 
   .add-btn {
     width: 15%;
+  }
+
+  .flex-div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
   }
 }

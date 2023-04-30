@@ -35,14 +35,16 @@ const AddBook = () => {
       setMessage('Please, put something in the fields');
       setTimeout(() => {
         setMessage('');
-      }, 2000);
+      }, 3000);
     }
   };
   return (
     <>
       <form className="add-form">
-        <h3>ADD NEW BOOK</h3>
-        <h2>{message}</h2>
+        <div className="flex-div">
+          <h3>ADD NEW BOOK</h3>
+          <h3>{message}</h3>
+        </div>
         <div className="form-inputs">
           <div className="fields">
             <input required="required" type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
