@@ -37,6 +37,11 @@
     width: 15%;
   }
 
+  .add-btn:hover {
+    color: white;
+    background-color: black;
+  }
+
   .flex-div {
     display: flex;
     justify-content: space-between;
