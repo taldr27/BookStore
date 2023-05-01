@@ -1,11 +1,15 @@
+.remove-book {
+  padding: 1em;
+  margin-top: 0.7em;
+}
 
 .remove-book:hover {
   color: white;
   background-color: black;
 }
 
-.remove-book {
-  width: 60%;
-  padding: 1em;
-  margin-top: 0.7em;
+@media only screen and (min-width: 1150px) {
+  .remove-book {
+    width: 60%;
+  }
 }

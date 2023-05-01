@@ -19,7 +19,7 @@ const Book = (
       </div>
       <div className="progress-container">
         <div className="graphic-progress">
-          <div className="circular-progress" />
+          <div className="empty-space" />
           <div className="progress-number">
             <CircularProgressbar
               className="circular-progress"

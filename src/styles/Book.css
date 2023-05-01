@@ -3,58 +3,161 @@
   --ff-secondary: 'Roboto', sans-serif;
 }
 
-.book-container {
-  background-color: white;
-  padding: 2em;
+.big-container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 98%);
 }
 
-@media only screen and (min-width: 600px) {
-  .big-container {
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(0, 0%, 98%);
-    margin: 0 3em 3em 3em;
-    height: 100%;
-    padding: 3em;
-  }
+.book-container {
+  background-color: white;
+  margin-bottom: 1em;
+  padding: 2em;
+  border: 1px solid #e8e8e8;
+}
 
-  .book-container {
-    background-color: white;
-    margin-bottom: 1em;
-    padding: 2em;
-    border: 1px solid #e8e8e8;
+.book-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-category {
+  font-size: 0.875rem;
+  font-weight: 700;
+  opacity: 0.5;
+  font-family: var(--ff-primary);
+}
+
+.span-title {
+  font-family: Roboto, sans-serif;
+  margin-top: 0.188rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.span-author {
+  color: #4386bf;
+  font-weight: 300;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.graphic-progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.percentage-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  border-left: 1px solid #e0e0e0;
+  height: 100px;
+  color: #4386bf;
+}
+
+.current-chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.updateStyle {
+  margin-top: 1em;
+}
+
+.percentageStyle {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+}
+
+.completedStyle {
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.currentChapter {
+  font-size: 0.813rem;
+  opacity: 0.5;
+}
+
+.empty-space {
+  border-radius: 0;
+  width: 0;
+  height: 0;
+}
+
+.circular-progress {
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+@media only screen and (min-width: 1150px) {
+  .big-container {
+    margin: 0 3em 3em 3em;
+    padding: 3em;
   }
 
   .book-data {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 1em;
   }
 
   .book-details {
-    display: flex;
-    flex-direction: column;
     width: 50%;
   }
 
-  .span-category {
-    font-size: 0.875rem;
-    font-weight: 700;
-    opacity: 0.5;
-    font-family: var(--ff-primary);
+  .progress-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0;
   }
 
-  .span-title {
-    font-family: Roboto, sans-serif;
-    margin-top: 0.188rem;
-    font-size: 1.375rem;
-    font-weight: 700;
-    letter-spacing: -0.2px;
+  .graphic-progress {
+    gap: 1em;
   }
 
-  .span-author {
-    color: #4386bf;
-    font-weight: 300;
+  .progress-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .percentage-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .book-buttons-container {
@@ -70,69 +173,9 @@
     font-weight: 300;
   }
 
-  .progress-container {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .graphic-progress {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-  }
-
-  .progress-number {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-  }
-
-  .percentage-number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .circular-progress {
+  .empty-space {
     border-radius: 50%;
     width: 4.25rem;
     height: 4.25rem;
-  }
-
-  .line {
-    border-left: 1px solid #e0e0e0;
-    height: 100px;
-    color: #4386bf;
-  }
-
-  .current-chapter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5em;
-  }
-
-  .updateStyle {
-    margin-top: 1em;
-  }
-
-  .percentageStyle {
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #121212;
-  }
-
-  .completedStyle {
-    font-size: 0.875rem;
-    font-family: 'Montserrat', sans-serif;
-    opacity: 0.5;
-    color: #121212;
-  }
-
-  .currentChapter {
-    font-size: 0.813rem;
-    opacity: 0.5;
   }
 }

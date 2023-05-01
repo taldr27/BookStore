@@ -1,20 +1,45 @@
+.main-title {
+  color: hsl(206, 100%, 50%);
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
 .navbar-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: white;
   text-align: center;
+  gap: 1em;
+  padding: 1em;
 }
 
 .navbar-data {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 3em;
+  gap: 1em;
 }
 
-@media only screen and (min-width: 600px) {
+.navBar-link {
+  cursor: pointer;
+  color: #929292c1;
+  text-decoration: none;
+}
+
+.navBar-link:focus {
+  color: black;
+}
+
+.selected {
+  color: black;
+}
+
+.user-button {
+  display: none;
+}
+
+@media only screen and (min-width: 1150px) {
   .navbar-container {
     display: flex;
     flex-direction: row;
@@ -26,12 +51,6 @@
     border-bottom: 1px solid #e8e8e8;
   }
 
-  .main-title {
-    color: hsl(206, 100%, 50%);
-    font-weight: 700;
-    font-size: 1.875rem;
-  }
-
   .navbar-data {
     display: flex;
     flex-direction: row;
@@ -39,21 +58,8 @@
     gap: 3em;
   }
 
-  .navBar-link {
-    cursor: pointer;
-    color: #929292c1;
-    text-decoration: none;
-  }
-
-  .navBar-link:focus {
-    color: black;
-  }
-
-  .selected {
-    color: black;
-  }
-
   .user-button {
+    display: block;
     border-radius: 20px;
     outline: none;
     border: 1px solid #bbb;
