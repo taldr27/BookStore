@@ -1,25 +1,62 @@
-@media only screen and (min-width: 600px) {
+.add-form {
+  padding: 1em;
+}
+
+.add-form > * {
+  margin-bottom: 1em;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.fields > * {
+  padding: 0.8em;
+  border-radius: 0.5em;
+  border: 1px solid #e8e8e8;
+}
+
+.add-btn {
+  margin-top: 2em;
+}
+
+.add-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.flex-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 1150px) {
   .add-form {
-    padding-bottom: 1em;
-  }
-
-  .add-form > * {
-    margin-bottom: 1em;
-  }
-
-  .add-form > h3 {
-    font-size: 1.25rem;
-    color: #888;
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
   }
 
   .form-inputs {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .fields {
     display: flex;
+    flex-direction: row;
     width: 80%;
     gap: 1em;
   }
@@ -40,6 +77,12 @@
   }
 
   .add-btn {
+    margin-top: 0;
     width: 15%;
+  }
+
+  .flex-div {
+    flex-direction: row;
+    margin-top: 0;
   }
 }

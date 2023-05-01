@@ -8,6 +8,7 @@ const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
+  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
   const uId = uuid();
   const id = uId.slice(0, 8);
@@ -21,27 +22,35 @@ const AddBook = () => {
   };
 
   const onChangeCategoryHandler = ({ target }) => setCategory(target.value);
-
   const onClickInput = () => {
-    dispatch(addBook({
-      id, title, author, category,
-    }));
-    setAuthor('');
-    setTitle('');
-    setCategory('');
-    setTimeout(() => dispatch(fetchBooks()), 500);
+    if (title !== '' && author !== '' && category !== '') {
+      dispatch(addBook({
+        id, title, author, category,
+      }));
+      setAuthor('');
+      setTitle('');
+      setCategory('');
+      setTimeout(() => dispatch(fetchBooks()), 500);
+    } else {
+      setMessage('Please, put something in the fields');
+      setTimeout(() => {
+        setMessage('');
+      }, 3000);
+    }
   };
-
   return (
     <>
       <form className="add-form">
-        <h3>ADD NEW BOOK</h3>
+        <div className="flex-div">
+          <h3>ADD NEW BOOK</h3>
+          <h3>{message}</h3>
+        </div>
         <div className="form-inputs">
           <div className="fields">
             <input required="required" type="text" placeholder="Book Title" onChange={onChangeHandlerTitle} value={title} />
             <input required="required" type="text" placeholder="Book Author" onChange={onChangeHandlerAuthor} value={author} />
             <select className="user-inputs" name={category} onChange={onChangeCategoryHandler} required>
-              <option value="" hidden>Choose Genre</option>
+              <option value="">Choose Genre</option>
               <option value="Action">Action</option>
               <option value="Suspense">Suspense</option>
               <option value="Romance">Romance</option>

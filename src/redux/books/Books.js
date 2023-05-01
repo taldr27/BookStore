@@ -14,6 +14,7 @@ export const fetchBooks = createAsyncThunk(FETCH_BOOKS, () => axios.get(url)
       title: books[id][0].title,
       author: books[id][0].author,
       category: books[id][0].category,
+      progress: Math.floor(Math.random() * 100),
     }));
     return data;
   }));
